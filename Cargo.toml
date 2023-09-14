@@ -1,0 +1,19 @@
+[package]
+name = "learn_eframe"
+version = "0.1.0"
+authors = ["JLer <jlerxky@live.com>"]
+edition = "2021"
+
+[dependencies]
+egui = "0.22"
+eframe = { version = "0.22", default-features = false, features = [
+    "wgpu",
+    "persistence",
+] }
+serde = { version = "1.0", features = ["derive"] }
+
+[profile.release]
+opt-level = 2
+
+[profile.dev.package."*"]
+opt-level = 2
